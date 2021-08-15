@@ -11,8 +11,12 @@
 	BCOR = 1cm,
 	titlepage = firstiscover,
 	]{scrbook}
-\usepackage[T1]{fontenc}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{luainputenc}
+
+\usepackage{xspace}
 \usepackage{calc} % \widthof
 
 % margin notes
@@ -28,12 +32,18 @@
 \renewcommand*{\chaptermarkformat}{}
 \newcommand{\scene}{\section}
 \RedeclareSectionCommand[style=chapter]{section}
-\renewcommand*{\sectionformat}{Szene \thesection\ --- }
-\renewcommand*{\sectionmarkformat}{Szene \thesection\ --- }
+\renewcommand*{\sectionformat}{Szene \thesection~— }
+\renewcommand*{\sectionmarkformat}{Szene \thesection~— }
 \newcommand{\direction}[1]{\textit{(#1)}}
 \newcommand{\setting}[1]{\vspace{-0.5\baselineskip}\centering\textit{#1}}
-% TODO
-\newcommand{\hiat}{---}
+\newcommand{\hiat}{%
+	\begin{center}
+		\tiny
+		\raisebox{0.5ex}{\rule{0.3\linewidth}{0.4pt}}
+		\textit{fickstrich}
+		\raisebox{0.5ex}{\rule{0.3\linewidth}{0.4pt}}
+	\end{center}
+}
 
 % "Elements of Typographic Style" table of contents
 \DeclareTOCStyleEntry[
@@ -69,11 +79,12 @@
 \usepackage{babel}
 
 % typography
-\usepackage{ebgaramond-maths}
-%\usepackage[urw-garamond]{mathdesign}
+% TODO correct font setup
+\usepackage{ebgaramond}
 \usepackage{microtype}
 \usepackage{setspace} % one-half spacing
-\usepackage[modulo]{lineno} % line numbers
+\usepackage[modulo,running]{lineno} % line numbers
+	%\renewcommand{\thelinenumber}{\thesection.\arabic{linenumber}}
 \usepackage{csquotes}
 \usepackage{siunitx}
 
@@ -87,13 +98,13 @@
 \usepackage{enumitem}
 \newlist{play}{description}{1}
 \newlength{\widthofchar}
-% TODO adjust
 \setlength{\widthofchar}{\widthof{\textsc{Stubenmädchen\quad}}}
 \setlist[play]{
 	labelwidth=\widthofchar,
 	leftmargin=!,
 	font=\rmfamily\mdseries\scshape,
-	itemsep=0pt
+	itemsep=0pt,
+	before={\linenumbers*}
 }
 
 % gray out deletions
@@ -138,7 +149,7 @@
 
 % shortcuts for characters
 % within line
-\newcommand{\thecharacter}[1]{\textup{\textsc{#1}}}
+\newcommand{\thecharacter}[1]{\textup{\textsc{#1}}\xspace}
 \newcommand{\thedirne}{\thecharacter{Dirne}}
 \newcommand{\thesoldat}{\thecharacter{Soldat}}
 \newcommand{\themaedchen}{\thecharacter{Stubenmädchen}}
@@ -193,10 +204,10 @@
 \lowertitleback{%
 	\footnotesize
 	\centering
-	Version vom \today\\
+	Version vom \today.\\
 	\vspace{0.5\baselineskip}
-	Geschrieben 1897, Erstausgabe 1900, Uraufführung am 23.12.1920.\\
-	Bearbeitung durch Philipp Stephan und Paul Breitner.\\
+	Geschrieben 1897, Erstausgabe 1900, Uraufführung am 23. Dezember 1920.\\
+	Bearbeitung durch Philipp Stephan, Paul Breitner und Natascha.\\%TODO Nachname
 	\vspace{0.5\baselineskip}
 	Gesetzt mit \LaTeX{} und \KOMAScript{} in EBGaramond.\\
 	Cover unter CC-BY-SA Lizenz von Wikipedia-Autor \textsc{Pokutius}.\\
@@ -217,7 +228,6 @@
 \pagestyle{headings}
 \pagenumbering{arabic}
 \doublespacing
-\linenumbers
 
 \act{Erster Akt}
 \scene{Die Dirne und der Soldat.}
@@ -2184,6 +2194,9 @@
 	Gute Nacht!
 
 \end{play}
+
+
+\act{Zweiter Akt}
 
 \scene{Der Gatte und das süße Mädel.}
 \characterlist{\thegatte, \thesuesse}
