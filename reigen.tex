@@ -53,7 +53,7 @@
 		indent = 0cm,
 	]{tocline}{chapter}
 \newlength{\scenenumwidth}
-\setlength{\scenenumwidth}{\widthof{Szene 8.88}}
+\setlength{\scenenumwidth}{\widthof{Szene 8.88 }}
 \DeclareTOCStyleEntry[
 		raggedpagenumber = true,
 		linefill = {},
@@ -85,6 +85,7 @@
 \usepackage{setspace} % one-half spacing
 \usepackage[modulo,running]{lineno} % line numbers
 	%\renewcommand{\thelinenumber}{\thesection.\arabic{linenumber}}
+	\renewcommand{\thelinenumber}{\arabic{section}.\arabic{linenumber}}
 \usepackage{csquotes}
 \usepackage{siunitx}
 
@@ -150,21 +151,21 @@
 % shortcuts for characters
 % within line
 \newcommand{\thecharacter}[1]{\textup{\textsc{#1}}\xspace}
-\newcommand{\thedirne}{\thecharacter{Nutte}}
-\newcommand{\thesoldat}{\thecharacter{Soldatin}}
-\newcommand{\thepraktikant}{\thecharacter{Praktikant}}
-\newcommand{\theherr}{\thecharacter{Junger Herr}}
-\newcommand{\thefrau}{\thecharacter{Junge Frau}}
-\newcommand{\thegatte}{\thecharacter{Gatte}}
-\newcommand{\thesuesse}{\thecharacter{Süßes Mädel}}
-\newcommand{\thedichter}{\thecharacter{Dichter}}
-\newcommand{\theschauspielerin}{\thecharacter{Schauspielerin}}
-\newcommand{\thegraf}{\thecharacter{Entrepeneurin}}
+\newcommand{\thenutte}{\thecharacter{Leocadia}}
+\newcommand{\thesoldatin}{\thecharacter{Franziska}}
+\newcommand{\thepraktikant}{\thecharacter{Timo}}
+\newcommand{\theherr}{\thecharacter{Benjamin}}
+\newcommand{\thefrau}{\thecharacter{Emma}}
+\newcommand{\thegatte}{\thecharacter{Christian}}
+\newcommand{\thesuesse}{\thecharacter{Lola}}
+\newcommand{\thedichter}{\thecharacter{Robert Bibitz}}
+\newcommand{\theschauspielerin}{\thecharacter{Daniela}}
+\newcommand{\theentrepeneurin}{\thecharacter{Katerina Albrecht}}
 
 % speaker of line
 \newcommand{\character}[1]{\item[#1:]}
-\newcommand{\dirne}{\character{\thedirne}}
-\newcommand{\soldat}{\character{\thesoldat}}
+\newcommand{\nutte}{\character{\thenutte}}
+\newcommand{\soldatin}{\character{\thesoldatin}}
 \newcommand{\praktikant}{\character{\thepraktikant}}
 \newcommand{\herr}{\character{\theherr}}
 \newcommand{\frau}{\character{\thefrau}}
@@ -172,7 +173,7 @@
 \newcommand{\suesse}{\character{\thesuesse}}
 \newcommand{\dichter}{\character{\thedichter}}
 \newcommand{\schauspielerin}{\character{\theschauspielerin}}
-\newcommand{\entrepeneurin}{\character{\thegraf}}
+\newcommand{\entrepeneurin}{\character{\theentrepeneurin}}
 
 % cover
 \usepackage{pdfpages}
@@ -190,16 +191,16 @@
 	\addsec*{Dramatis Person\ae}
 	\vspace{\baselineskip}
 	\raggedright
-	Eine \thedirne\\
-	Ein \thesoldat\\
-	Ein \thepraktikant\\
-	Ein \theherr\\
-	Eine \thefrau, anfang-mitte zwanzig\\
-	Ein \thegatte, anfang vierzig\\
-	Ein \thesuesse, 17\\
-	Ein \thedichter\\
-	Eine \theschauspielerin\\
-	Ein \thegraf
+	\thenutte, eine Nutte, 19\\
+	\thesoldatin, eine Soldatin, anfang 20\\
+	\thepraktikant, ein Praktikant, anfang 20\\
+	\theherr, ein junger Herr, ende 20\\
+	\thefrau, eine junge Frau, ende 20\\
+	\thegatte, ein Ehemann, anfang 40\\
+	\thesuesse, ein süßes Mädchen, 17\\
+	\thedichter, ein Schriftsteller, anfang 30\\
+	\theschauspielerin, eine Schauspielerin, anfang 30\\
+	\theentrepeneurin, eine Entrepeneurin, anfang 40
 }
 \lowertitleback{%
 	\footnotesize
@@ -231,207 +232,207 @@
 
 \act{Erster Akt}
 \scene{Die Nutte und die Soldatin.}
-\characterlist{\thedirne, \thesoldat}
+\characterlist{\thenutte, \thesoldatin}
 \setting{Spät abends. Am Straßenstrich.}
 \begin{play}
-	\soldat
+	\soldatin
 	\direction{kommt pfeifend, will nach Hause.}
 
-	\dirne
+	\nutte
 	Komm, mein schöner Engel.
 
-	\soldat
+	\soldatin
 	\direction{wendet sich um und geht wieder weiter.}
 
-	\dirne
+	\nutte
 	Willst du nicht mit mir kommen?
 
-	\soldat
+	\soldatin
 	Ah, ich bin der schöne Engel?
 
-	\dirne
+	\nutte
 	Freilich, wer denn? Geh, komm zu mir. Ich wohn gleich in der Näh.
 
-	\soldat
+	\soldatin
 	Ich hab keine Zeit. Ich muß in die Kasern!
 
-	\dirne
+	\nutte
 	In die Kasern kommst immer noch zurecht. Bei mir is besser.
 
-	\soldat
+	\soldatin
 	\direction{ihr nahe.} Das ist schon möglich.
 
-	\dirne
+	\nutte
 	Pst. Jeden Moment kann ein Wachmann kommen.
 
-	\soldat
+	\soldatin
 	Lächerlich! Wachmann! Ich hab auch mein Seiteng wehr!
 
-	\dirne
+	\nutte
 	Geh, komm mit.
 
-	\soldat
+	\soldatin
 	Laß mich in Ruh, Geld hab ich eh keins.
 
-	\dirne
+	\nutte
 	Ich brauch kein Geld.
 
-	\soldat
+	\soldatin
 	\direction{bleibt stehen. Sie sind bei einer Laterne.} Du brauchst kein Geld? Wer bist denn du nachher?
 
-	\dirne
+	\nutte
 	Zahlen tun mir die Zivilisten. So einer wie du kanns immer umsonst bei mir haben.
 
-	\soldat
+	\soldatin
 	Du bist am End die, von der mir der Huber erzählt hat.
 
-	\dirne
+	\nutte
 	Ich kenn kein Huber nicht.
 
-	\soldat
+	\soldatin
 	Du wirst schon die sein. Weißt --- in dem Kaffeehaus in der Schiffgassen --- von dort ist er mit dir z Haus gangen.
 
-	\dirne
+	\nutte
 	Von dem Kaffeehaus bin ich schon mit gar vielen z Haus gangen \ldots{} oh! oh! ---
 
-	\soldat
+	\soldatin
 	Also gehn wir, gehn wir.
 
-	\dirne
+	\nutte
 	Was, jetzt hasts eilig?
 
-	\soldat
+	\soldatin
 	Na, worauf solln wir noch warten? Und um zehn muß ich in der Kasern sein.
 
-	\dirne
+	\nutte
 	Wie lang dienst denn schon?
 
-	\soldat
+	\soldatin
 	Was geht denn das dich an? Wohnst weit?
 
-	\dirne
+	\nutte
 	Zehn Minuten zum gehn.
 
-	\soldat
+	\soldatin
 	Das ist mir zu weit. Gib mir ein Pussel.
 
-	\dirne
+	\nutte
 	\direction{küßt ihn.} Das ist mir eh das liebste, wenn ich einen gern hab!
 
-	\soldat
+	\soldatin
 	Mir nicht. Nein, ich geh nicht mit dir, es ist mir zu weit.
 
-	\dirne
+	\nutte
 	Weißt was, komm morgen am Nachmittag.
 
-	\soldat
+	\soldatin
 	Gut is. Gib mir deine Adresse.
 
-	\dirne
+	\nutte
 	Aber du kommst am End nicht.
 
-	\soldat
+	\soldatin
 	Wenn ich dirs sag!
 
-	\dirne
+	\nutte
 	Du, weißt was --- wenns dir zu weit ist heut abend zu mir --- da \ldots{} da \ldots{} \direction{weist auf die Donau.}
 
-	\soldat
+	\soldatin
 	Was ist das?
 
-	\dirne
+	\nutte
 	Da ist auch schön ruhig \ldots{} jetzt kommt kein Mensch.
 
-	\soldat
+	\soldatin
 	Ah, das ist nicht das Rechte.
 
-	\dirne
+	\nutte
 	Bei mir is immer das Rechte. Geh, bleib jetzt bei mir. Wer weiß, ob wir morgen nochs Leben haben.
 
-	\soldat
+	\soldatin
 	So komm --- aber g'schwind!
 
-	\dirne
+	\nutte
 	Gib Obacht, da ist so dunkel. Wennst ausrutschst, liegst in der Donau.
 
-	\soldat
+	\soldatin
 	Wär eh das beste.
 
-	\dirne
+	\nutte
 	Pst, so wart nur ein bissel. Gleich kommen wir zu einer Bank.
 
-	\soldat
+	\soldatin
 	Kennst dich da gut aus.
 
-	\dirne
+	\nutte
 	So einen wie dich möcht ich zum Geliebten.
 
-	\soldat
+	\soldatin
 	Ich tät dir zu viel eifern.
 
-	\dirne
+	\nutte
 	Das möcht ich dir schon abgewöhnen.
 
-	\soldat
+	\soldatin
 	Ha ---
 
-	\dirne
+	\nutte
 	Nicht so laut. Manchmal is doch, daß sich ein Wachter her verirrt. Sollt man glauben, daß wir da mitten in der Wienerstadt sind?
 
-	\soldat
+	\soldatin
 	Daher komm, daher.
 
-	\dirne
+	\nutte
 	Aber was fällt dir denn ein, wenn wir da ausrutschen, liegen wir im Wasser unten.
 
-	\soldat
+	\soldatin
 	\direction{hat sie gepackt.} Ah, du ---
 
-	\dirne
+	\nutte
 	Halt dich nur fest an.
 
-	\soldat
+	\soldatin
 	Hab kein Angst \ldots{}
 
 	\hiat
 
-	\dirne
+	\nutte
 	Auf der Bank wärs schon besser gewesen.
 
-	\soldat
+	\soldatin
 	Da oder da \ldots{} Na, krall aufi.
 
-	\dirne
+	\nutte
 	Was laufst denn so ---
 
-	\soldat
+	\soldatin
 	Ich muß in die Kasern, ich komm eh schon zu spät.
 
-	\dirne
+	\nutte
 	Geh, du, wie heißt denn?
 
-	\soldat
+	\soldatin
 	Was interessiert dich denn das, wie ich heiß?
 
-	\dirne
+	\nutte
 	Ich heiß Leocadia.
 
-	\soldat
+	\soldatin
 	Ha! --- So an Namen hab ich auch noch nie gehört.
 
-	\dirne
+	\nutte
 	Du!
 
-	\soldat
+	\soldatin
 	Na, was willst denn?
 
-	\dirne
+	\nutte
 	Geh, ein Sechserl fürn Hausmeister gib mir wenigstens! ---
 
-	\soldat
+	\soldatin
 	Ha! \ldots{} Glaubst, ich bin deine Wurzen. Servus! Leocadia \ldots{}
 
-	\dirne
+	\nutte
 	Strizzi! Fallott! ---
 
 	\direction{Er ist verschwunden.}
@@ -439,7 +440,7 @@
 \end{play}
 
 \scene{Die Soldatin und der Praktikant.}
-\characterlist{\thesoldat, \thepraktikant}
+\characterlist{\thesoldatin, \thepraktikant}
 \setting{Dorfdisko im Speckgürtel Berlins.}
 \begin{play}
 
@@ -447,145 +448,145 @@
 	\praktikant
 	Jetzt sagen S' mir aber, warum S' durchaus schon haben fortgehen müssen.
 
-	\soldat
+	\soldatin
 	\direction{lacht verlegen, dumm.}
 
 	\praktikant
 	Es ist doch so schön gewesen. Ich tanz so gern.
 
-	\soldat
+	\soldatin
 	\direction{faßt sie um die Taille.}
 
 	\praktikant
 	\direction{läßts geschehen.} Jetzt tanzen wir ja nimmer. Warum halten S' mich so fest?
 
-	\soldat
+	\soldatin
 	Wie heißen S'? Kathi?
 
 	\praktikant
 	Ihnen ist immer eine Kathi im Kopf.
 
-	\soldat
+	\soldatin
 	Ich weiß, ich weiß schon \ldots{} Marie.
 
 	\praktikant
 	Sie, da ist aber dunkel. Ich krieg so eine Angst.
 
-	\soldat
+	\soldatin
 	Wenn ich bei Ihnen bin, brauchen S' Ihnen nicht zu fürchten. Gott sei Dank, mir sein mir!
 
 	\praktikant
 	Aber wohin kommen wir denn da? Da ist ja kein Mensch mehr. Kommen S', gehn wir zurück! --- Und so dunkel!
 
-	\soldat
+	\soldatin
 	\direction{zieht an seiner Virginierzigarre, daß das rote Ende leuchtet.} s' wird schon lichter! Haha! Oh, du Schatzerl!
 
 	\praktikant
 	Ah, was machen S' denn? Wenn ich das gewußt hätt!
 
-	\soldat
+	\soldatin
 	Also der Teufel soll mich holen, wenn eine heut beim Swoboda mollerter gewesen ist als Sie, Fräul'n Marie.
 
 	\praktikant
 	Haben S' denn bei allen so probiert?
 
-	\soldat
+	\soldatin
 	Was man so merkt, beim Tanzen. Da merkt man gar viel! Ha!
 
 	\praktikant
 	Aber mit der Blonden mit dem schiefen Gesicht haben S' doch mehr tanzt als mit mir.
 
-	\soldat
+	\soldatin
 	Das ist eine alte Bekannte von einem meinigen Freund.
 
 	\praktikant
 	Von dem Korporal mit dem aufdrehten Schnurrbart?
 
-	\soldat
+	\soldatin
 	Ah nein, das ist der Zivilist gewesen, wissen S', der im Anfang am Tisch mit mir g'sessen ist, der so heisrig redt.
 
 	\praktikant
 	Ah, ich weiß schon. Das ist ein kecker Mensch.
 
-	\soldat
+	\soldatin
 	Hat er Ihnen was tan? Dem möcht ichs zeigen! Was hat er Ihnen tan?
 
 	\praktikant
 	Oh, nichts --- ich hab nur gesehn, wie er mit die andern ist.
 
-	\soldat
+	\soldatin
 	Sagen S', Fräulein Marie \ldots{}
 
 	\praktikant
 	Sie werden mich verbrennen mit Ihrer Zigarrn.
 
-	\soldat
+	\soldatin
 	Pahdon! --- Fräul'n Marie. Sagen wir uns du.
 
 	\praktikant
 	Wir sein noch nicht so gute Bekannte.
 
-	\soldat
+	\soldatin
 	Es können sich gar viele nicht leiden und sagen doch du zueinander.
 
 	\praktikant
 	's nächstemal, wenn wir \ldots{} Aber, Herr Franz ---
 
-	\soldat
+	\soldatin
 	Sie haben sich meinen Namen g'merkt?
 
 	\praktikant
 	Aber, Herr Franz \ldots{}
 
-	\soldat
+	\soldatin
 	Sagen S' Franz, Fräulein Marie.
 
 	\praktikant
 	So sein S' nicht so keck --- aber pst, wenn wer kommen tät!
 
-	\soldat
+	\soldatin
 	Und wenn schon einer kommen tät, man sieht ja nicht zwei Schritt weit.
 
 	\praktikant
 	Aber um Gottes willen, wohin kommen wir denn da?
 
-	\soldat
+	\soldatin
 	Sehn S', da sind zwei grad wie mir.
 
 	\praktikant
 	Wo denn? Ich seh gar nichts.
 
-	\soldat
+	\soldatin
 	Da \ldots{} vor uns.
 
 	\praktikant
 	Warum sagen S' denn: zwei wie mir? ---
 
-	\soldat
+	\soldatin
 	Na, ich mein halt, die haben sich auch gern.
 
 	\praktikant
 	Aber geben S' doch acht, was ist denn da, jetzt wär ich beinah g'fallen.
 
-	\soldat
+	\soldatin
 	Ah, das ist das Gatter von der Wiesen.
 
 	\praktikant
 	Stoßen S' doch nicht so, ich fall ja um.
 
-	\soldat
+	\soldatin
 	Pst, nicht so laut.
 
 	\praktikant
 	Sie, jetzt schrei ich aber wirklich. --- Aber was machen S' denn \ldots{} aber ---
 
-	\soldat
+	\soldatin
 	Da ist jetzt weit und breit keine Seel.
 
 	\praktikant
 	So gehn wir zurück, wo Leut sein.
 
-	\soldat
+	\soldatin
 	Wir brauchen keine Leut, was, Marie, wir brauchen \ldots{} dazu \ldots{} haha.
 
 	\praktikant
@@ -593,84 +594,84 @@
 
 	\hiat
 
-	\soldat
+	\soldatin
 	\direction{selig.} Herrgott noch einmal \ldots{} ah \ldots{}
 
 	\praktikant
 	\ldots{} Ich kann dein G'sicht gar nicht sehn.
 
-	\soldat
+	\soldatin
 	A was --- G'sicht \ldots{}
 
 	\hiat
 
-	\soldat
+	\soldatin
 	Ja, Sie, Fräul'n Marie, da im Gras können S' nicht liegenbleiben.
 
 	\praktikant
 	Geh, Franz, hilf mir.
 
-	\soldat
+	\soldatin
 	Na, komm zugi.
 
 	\praktikant
 	O Gott, Franz.
 
-	\soldat
+	\soldatin
 	Naja, was ist denn mit dem Franz?
 
 	\praktikant
 	Du bist ein schlechter Mensch, Franz.
 
-	\soldat
+	\soldatin
 	Ja, ja. Geh, wart ein bissel.
 
 	\praktikant
 	Was laßt mich denn aus?
 
-	\soldat
+	\soldatin
 	Na, die Virginier werd ich mir doch anzünden dürfen.
 
 	\praktikant
 	Es ist so dunkel.
 
-	\soldat
+	\soldatin
 	Morgen früh ist schon wieder licht.
 
 	\praktikant
 	Sag wenigstens, hast mich gern?
 
-	\soldat
+	\soldatin
 	Na, das mußt doch g'spürt haben, Fräul'n Marie, ha!
 
 	\praktikant
 	Wohin gehn wir denn?
 
-	\soldat
+	\soldatin
 	Na, zurück.
 
 	\praktikant
 	Geh, bitt dich, nicht so schnell!
 
-	\soldat
+	\soldatin
 	Na, was ist denn? Ich geh nicht gern in der finstern.
 
 	\praktikant
 	Sag, Franz, hast mich gern?
 
-	\soldat
+	\soldatin
 	Aber grad hab ichs gsagt, daß ich dich gern hab!
 
 	\praktikant
 	Geh, willst mir nicht ein Pussel geben?
 
-	\soldat
+	\soldatin
 	\direction{gnädig.} Da \ldots{} Hörst --- jetzt kann man schon wieder die Musik hören.
 
 	\praktikant
 	Du möchtst am End gar wieder tanzen gehn?
 
-	\soldat
+	\soldatin
 	Na freilich, was denn?
 
 	\praktikant
@@ -679,55 +680,55 @@
 		Sie werden eh schon schimpfen, mei Frau ist so eine \ldots{} die möcht am liebsten, man ging gar nicht fort.
 	\end{deletion}
 
-	\soldat
+	\soldatin
 	Na ja, geh halt zuhaus.
 
 	\praktikant
 	Ich hab halt dacht, Herr Franz, Sie werden mich z'aus führen.
 
-	\soldat
+	\soldatin
 	Z'haus führen? Ah!
 
 	\praktikant
 	Gehn S', es ist so traurig, allein z'haus gehn.
 
-	\soldat
+	\soldatin
 	Wo wohnen S' denn?
 
 	\praktikant
 	Es ist gar nicht so weit --- in Teltow.
 
-	\soldat
+	\soldatin
 	So? Ja, da haben wir ja einen Weg \ldots{} aber jetzt ists mir zu früh \ldots{} jetzt wird noch draht, heut hab ich über Zeit \ldots{} vor zwölf brauch ich nicht in der Kasern zu sein. I geh noch tanzen.
 
 	\praktikant
 	Freilich, ich weiß schon, jetzt kommt die Blonde mit dem schiefen Gesicht dran!
 
-	\soldat
+	\soldatin
 	Ha! --- Der ihr G'sicht ist gar nicht so schief.
 
 	\praktikant
 	O Gott, sein die Männer schlecht. Was, Sie machens sicher mit einer jeden so.
 
-	\soldat
+	\soldatin
 	Das wär z'viel! ---
 
 	\praktikant
 	Franz, bitt schön, heut nimmer, --- heut bleiben S' mit mir, schaun S' ---
 
-	\soldat
+	\soldatin
 	Ja, ja, ist schon gut. Aber tanzen werd ich doch noch dürfen.
 
 	\praktikant
 	Ich tanz heut mit kein mehr!
 
-	\soldat
+	\soldatin
 	Da ist er ja schon \ldots{}
 
 	\praktikant
 	Wer denn?
 
-	\soldat
+	\soldatin
 	Der Swoboda! Wie schnell wir wieder da sein. Noch immer spielen s' das \ldots{} tadarada tadarada \ldots{} \direction{Singt mit.} \ldots{} Also, wanst auf mich warten willst, so führ ich dich z'haus \ldots{} wenn nicht \ldots{} Servus ---
 
 	\praktikant
@@ -735,7 +736,7 @@
 
 	\direction{Sie treten in den Tanzsaal ein.}
 
-	\soldat
+	\soldatin
 	Wissen S', Fräul'n Marie, ein Glas Bier lassens Ihnen geben. \direction{Zu einer Blonden sich wendend, die eben mit einem Burschen vorbeitanzt, sehr hochdeutsch.} Mein Fräulein, darf ich bitten? ---
 
 \end{play}
@@ -2251,7 +2252,7 @@
 \end{play}
 
 
-\act{Zweiter Akt}
+%\act{Zweiter Akt}
 
 \scene{Der Gatte und das süße Mädel.}
 \characterlist{\thegatte, \thesuesse}
@@ -4191,7 +4192,7 @@
 \end{play}
 
 \scene{Die Schauspielerin und die Entrepeneurin.}
-\characterlist{\theschauspielerin, \thegraf}
+\characterlist{\theschauspielerin, \theentrepeneurin}
 \setting{Das Schlafzimmer der Schauspielerin. Die Entrepeneurin tritt ein in einem feinen Kostüm.}
 \begin{play}
 	\schauspielerin
@@ -4711,247 +4712,247 @@
 \end{play}
 
 \scene{Die Entrepeneurin und die Nutte.}
-\characterlist{\thedirne, \thegraf}
-\setting{Ein ärmliches Zimmer. Im Bett liegt schlafend die Dirne. Auf dem Diwan, völlig angekleidet, liegt die Entrepeneurin.}
+\characterlist{\thenutte, \theentrepeneurin}
+\setting{Ein ärmliches Zimmer. Im Bett liegt schlafend die nutte. Auf dem Diwan, völlig angekleidet, liegt die Entrepeneurin.}
 \begin{play}
 	\entrepeneurin
 	\direction{bewegt sich, reibt die Augen, erhebt sich rasch, bleibt sitzen, schaut um sich.} Ja, wie bin ich denn \ldots{} Ah so \ldots{} Also bin ich richtig mit dem Frauenzimmer nach Haus \ldots{} \direction{Er steht rasch auf, sieht ihr Bett.} Da liegt s' ja \ldots{} Was einem noch alles in meinem Alter passieren kann. Ich hab keine Idee, haben s' mich da heraufgetragen? Nein \ldots{} ich hab ja gesehn --- ich komm in das Zimmer \ldots{} ja \ldots{} da bin ich noch wach gewesen oder wach worden \ldots{} oder \ldots{} oder ist vielleicht nur, daß mich das Zimmer an was erinnert? \ldots{} Meiner Seel, na ja \ldots{} gestern hab ichs halt g'sehn \ldots{} \direction{Sieht auf die Uhr.} Was! Gestern, vor ein paar Stunden --- Aber ich habs g'wußt, daß was passieren muß \ldots{} ich habs g'spürt \ldots{} wie ich ang'fangen hab zu trinken gestern, hab ichs g'spürt, daß \ldots{} Und was ist denn passiert? \ldots{} Also nichts \ldots{} Oder ist was \ldots{}? Meiner Seel \ldots{} seit \ldots{} also seit zehn Jahren ist mir so was nicht vorkommen, daß ich nicht weiß \ldots{} Also kurz und gut, ich war halt b'soffen. Wenn ich nur wüßt, von wann an \ldots{} Also das weiß ich noch ganz genau, wie ich in das Hurenkaffeehaus hinein bin mit dem Lulu und \ldots{} nein, nein \ldots{} vom Sacher sind wir ja noch weggangen \ldots{} und dann auf dem Weg ist schon \ldots{} Ja richtig, ich bin ja in meinem Wagen g'fahren mit'm Lulu \ldots{} Was zerbrich ich mir denn viel den Kopf. Ist ja egal. Schaun wir, daß wir weiterkommen. \direction{Steht auf. Die Lampe wackelt.} Oh! \direction{Sieht auf die Schlafende.} Die hat halt einen g'sunden Schlaf. Ich weiß zwar von gar nix --- aber ich werd ihr's Geld aufs Nachtkastel legen \ldots{} und Servus \ldots{} \direction{Er steht vor ihr, sieht sie lange an.} Wenn man nicht wüßt, was sie ist! \direction{Betrachtet sie lang.} Ich hab viel kennt, die haben nicht einmal im Schlafen so tugendhaft ausg'sehn. Meiner Seel \ldots{} also der Lulu möcht wieder sagen, ich philosophier, aber es ist wahr, der Schlaf macht auch schon gleich, kommt mir vor; --- wie der Herr Bruder, also der Tod \ldots{} Hm, ich möcht nur wissen, ob \ldots{} Nein, daran müßt ich mich ja erinnern \ldots{} Nein, nein, ich bin gleich da auf den Diwan herg'fallen und nichts ist g'schehn \ldots{} Es ist unglaublich, wie sich manchmal alle Weiber ähnlich schauen \ldots{} Na, gehn wir. \direction{Er will gehen.} Ja richtig.\direction{Er nimmt die Brieftasche und ist eben daran eine Banknote herauszunehmen.}
 
-	\dirne
+	\nutte
 	\direction{wacht auf.} Na \ldots{} wer ist denn in aller Früh ---? \direction{Erkennt ihn.} Servus, Bubi!
 
 	\entrepeneurin
 	Guten Morgen. Hast gut g'schlafen?
 
-	\dirne
+	\nutte
 	\direction{reckt sich.} Ah, komm her. Pussi geben.
 
 	\entrepeneurin
 	\direction{beugt sich zu ihr herab, besinnt sich, wieder fort.} Ich hab grad fortgehen wollen \ldots{}
 
-	\dirne
+	\nutte
 	Fortgehn?
 
 	\entrepeneurin
 	Es ist wirklich die höchste Zeit.
 
-	\dirne
+	\nutte
 	So willst du fortgehn?
 
 	\entrepeneurin
 	\direction{fast verlegen.} So \ldots{}
 
-	\dirne
+	\nutte
 	Na, Servus; kommst halt ein anderes Mal.
 
 	\entrepeneurin
 	Ja, grüß dich Gott. Na, willst nicht das Handerl geben?
 
-	\dirne
+	\nutte
 	\direction{gibt die Hand aus der Decke hervor.}
 
 	\entrepeneurin
 	\direction{nimmt die Hand und küßt sie mechanisch, bemerkt es, lacht.} Wie einer Prinzessin. Übrigens, wenn man nur \ldots{}
 
-	\dirne
+	\nutte
 	Was schaust mich denn so an?
 
 	\entrepeneurin
 	Wenn man nur das Kopferl sieht, wie jetzt \ldots{} beim Aufwachen sieht doch eine jede unschuldig aus \ldots{} meiner Seel, alles mögliche könnt man sich einbilden, wenns nicht so nach Petroleum stinken möcht \ldots{}
 
-	\dirne
+	\nutte
 	Ja, mit der Lampen ist immer ein G'frett.
 
 	\entrepeneurin
 	Wie alt bist denn eigentlich?
 
-	\dirne
+	\nutte
 	Na, was glaubst?
 
 	\entrepeneurin
 	Vierundzwanzig.
 
-	\dirne
+	\nutte
 	Ja freilich.
 
 	\entrepeneurin
 	Bist schon älter?
 
-	\dirne
+	\nutte
 	Ins Zwanzigste geh i.
 
 	\entrepeneurin
 	Und wie lang bist du schon \ldots{}
 
-	\dirne
+	\nutte
 	Bei dem G'schäft bin i ein Jahr!
 
 	\entrepeneurin
 	Da hast du aber früh ang'fangen.
 
-	\dirne
+	\nutte
 	Besser zu früh als zu spät.
 
 	\entrepeneurin
 	\direction{setzt sich aufs Bett.} Sag mir einmal, bist du eigentlich glücklich?
 
-	\dirne
+	\nutte
 	Was?
 
 	\entrepeneurin
 	Also ich mein, gehts dir gut?
 
-	\dirne
+	\nutte
 	Oh, mir gehts alleweil gut.
 
 	\entrepeneurin
 	So \ldots{} Sag, ist dir noch nie eing'fallen, daß du was anderes werden könntest?
 
-	\dirne
+	\nutte
 	Was soll i denn werden?
 
 	\entrepeneurin
 	Also \ldots{} Du bist doch wirklich ein hübsches Mädel. Du könntest doch zum Beispiel einen Geliebten haben.
 
-	\dirne
+	\nutte
 	Meinst vielleicht, ich hab kein?
 
 	\entrepeneurin
 	Ja, das weiß ich --- ich mein aber einen, weißt einen, der dich aushalt, daß du nicht mit einem jeden zu gehn brauchst.
 
-	\dirne
+	\nutte
 	I geh auch nicht mit ein jeden. Gott sei Dank, das hab i net notwendig, ich such mir s' schon aus.
 
 	\entrepeneurin
 	\direction{sieht sich im Zimmer um.}
 
-	\dirne
+	\nutte
 	\direction{bemerkt das.} Im nächsten Monat ziehn wir in die Stadt, in die Spiegelgasse.
 
 	\entrepeneurin
 	Wir? Wer denn?
 
-	\dirne
+	\nutte
 	Na, die Frau, und die paar anderen Mädeln, die noch da wohnen.
 
 	\entrepeneurin
 	Da wohnen noch solche ---
 
-	\dirne
+	\nutte
 	Da daneben \ldots{} hörst net \ldots{} das ist die Milli, die auch im Kaffeehaus g'wesen ist.
 
 	\entrepeneurin
 	Da schnarcht wer.
 
-	\dirne
+	\nutte
 	Das ist schon die Milli, die schnarcht jetzt weiter n' ganzen Tag bis um zehn auf d' Nacht. Dann steht s' auf und geht ins Kaffeehaus.
 
 	\entrepeneurin
 	Das ist doch ein schauderhaftes Leben.
 
-	\dirne
+	\nutte
 	Freilich. Die Frau gift sich auch genug. Ich bin schon um zwölfe Mittag immer auf der Gassen.
 
 	\entrepeneurin
 	Was machst denn um zwölf auf der Gassen?
 
-	\dirne
+	\nutte
 	Was werd ich denn machen? Auf den Strich geh ich halt.
 
 	\entrepeneurin
 	Ah so \ldots{} natürlich \ldots{} \direction{Steht auf, nimmt die Brieftasche heraus, legt ihr eine Banknote auf das Nachtkastel.} Adieu!
 
-	\dirne
+	\nutte
 	Gehst schon \ldots{} Servus \ldots{} Komm bald wieder. \direction{Legt sich auf die Seite.}
 
 	\entrepeneurin
 	\direction{bleibt wieder stehen.} Du, sag einmal, dir ist schon alles egal --- was?
 
-	\dirne
+	\nutte
 	Was?
 
 	\entrepeneurin
 	Ich mein, dir machts gar keine Freud mehr.
 
-	\dirne
+	\nutte
 	\direction{gähnt.} Ein Schlaf hab ich.
 
 	\entrepeneurin
 	Dir ist alles eins, ob einer jung ist oder alt, oder ob einer \ldots{}
 
-	\dirne
+	\nutte
 	Was fragst denn?
 
 	\begin{deletion}
 	\entrepeneurin
 	\ldots{} Also --- \direction{Plötzlich auf etwas kommend.} --- meiner Seel, jetzt weiß ich, an wen du mich erinnerst, das ist \ldots{}
 
-	\dirne
+	\nutte
 	Schau i wem gleich?
 
 	\entrepeneurin
 	Unglaublich, unglaublich, jetzt bitt ich dich aber sehr, red gar nichts, eine Minute wenigstens \ldots{} \direction{Schaut sie an.} Ganz dasselbe G'sicht, ganz dasselbe G'sicht. \direction{Er küßt sie plötzlich auf die Augen.}
 
-	\dirne
+	\nutte
 	Na \ldots{}
 
 	\end{deletion}
 	\entrepeneurin
 	Meiner Seel, es ist schad, daß du \ldots{} nichts andres bist \ldots{} Du könntst ja dein Glück machen!
 
-	\dirne
+	\nutte
 	Du bist grad wie der Franz.
 
 	\begin{deletion}
 	\entrepeneurin
 	Wer ist Franz?
 
-	\dirne
+	\nutte
 	Na, der Kellner von unserm Kaffeehaus \ldots{}
 
 	\entrepeneurin
 	Wieso bin ich grad so wie der Franz?
 
 	\end{deletion}
-	\dirne
+	\nutte
 	Der sagt auch alleweil, ich könnt mein Glück machen, und ich soll ihn heiraten.
 
 	\entrepeneurin
 	Warum tust du's nicht?
 
-	\dirne
+	\nutte
 	Ich dank schön \ldots{} ich möcht nicht heiraten, nein, um keinen Preis. Später einmal vielleicht.
 
 	\begin{deletion}
 	\entrepeneurin
 	Die Augen \ldots{} ganz die Augen \ldots{} Der Lulu möcht sicher sagen, ich bin ein Narr --- aber ich will dir noch einmal die Augen küssen \ldots{} so \ldots{} und jetzt grüß dich Gott, jetzt geh ich.
 
-	\dirne
+	\nutte
 	Servus \ldots{}
 	\end{deletion}
 
 	\entrepeneurin
 	Du \ldots{} sag \ldots{} wundert dich das gar nicht \ldots{}
 
-	\dirne
+	\nutte
 	Was denn?
 
 	\entrepeneurin
 	Daß ich nichts von dir will.
 
-	\dirne
+	\nutte
 	Es gibt viel Männer, die in der Früh nicht aufgelegt sind.
 
 	\entrepeneurin
 	Na ja \ldots{} \direction{Für sich.} Zu dumm, daß ich will, sie soll sich wundern \ldots{} Also Servus \ldots{} \direction{Er ist bei der Tür.} Eigentlich ärger ich mich. Ich weiß doch, daß es solchen Frauenzimmern nur aufs Geld an kommt \ldots{} was sag ich --- solchen \ldots{} es ist schön \ldots{} daß sie sich wenigstens nicht verstellt, das sollte einen eher freuen \ldots{} Du --- weißt, ich komm nächstens wieder zu dir.
 
-	\dirne
+	\nutte
 	\direction{mit geschlossenen Augen.} Gut.
 
 	\entrepeneurin
 	Wann bist du immer zu Haus?
 
-	\dirne
+	\nutte
 	Ich bin immer zu Haus. Brauchst nur nach der Leocadia zu fragen.
 
 	\entrepeneurin
@@ -4961,67 +4962,67 @@
 	\end{deletion}
 	\direction{Wendet sich zu ihr.} Du, Leocadie, passiert dir das öfter, daß man so weggeht von dir?
 
-	\dirne
+	\nutte
 	Wie denn?
 
 	\entrepeneurin
 	So wie ich?
 
-	\dirne
+	\nutte
 	In der Früh?
 
 	\entrepeneurin
 	Nein \ldots{} ob schon manchmal wer bei dir war --- und nichts von dir wollen hat?
 
-	\dirne
+	\nutte
 	Nein, das ist mir noch nie g'schehn.
 
 	\entrepeneurin
 	Also, was meinst denn? Glaubst, du g'fallst mir nicht?
 
-	\dirne
+	\nutte
 	Warum soll ich dir denn nicht g'fallen? Bei der Nacht hab ich dir schon g'fallen.
 
 	\entrepeneurin
 	Du g'fallst mir auch jetzt.
 
-	\dirne
+	\nutte
 	Aber bei der Nacht hab ich dir besser g'fal len.
 
 	\entrepeneurin
 	Warum glaubst du das?
 
-	\dirne
+	\nutte
 	Na, was fragst denn so dumm?
 
 	\entrepeneurin
 	Bei der Nacht \ldots{} ja, sag, bin ich denn nicht gleich am Diwan hing'fallen?
 
-	\dirne
+	\nutte
 	Na freilich \ldots{} mit mir zusammen.
 
 	\entrepeneurin
 	Mit dir?
 
-	\dirne
+	\nutte
 	Ja, weißt denn du das nimmer?
 
 	\entrepeneurin
 	Ich hab \ldots{} wir sind zusammen \ldots{} ja \ldots{}
 
-	\dirne
+	\nutte
 	Aber gleich bist eing'schlafen.
 
 	\entrepeneurin
 	Gleich bin ich \ldots{} So \ldots{} Also so war das! \ldots{}
 
-	\dirne
+	\nutte
 	Ja, Bubi. Du mußt aber ein ordentlichen Rausch g'habt haben, daß dich nimmer erinnerst.
 
 	\entrepeneurin
 	So \ldots{} --- Und doch \ldots{} es ist eine entfernte Ähnlichkeit \ldots{} Servus \ldots{} \direction{Lauscht.} Was ist denn los?
 
-	\dirne
+	\nutte
 	Die Kollegin ist schon auf. Geh, gib ihr was beim Hinausgehn. Das Tor ist auch offen, ersparst den Hausmeister.
 
 	\entrepeneurin
